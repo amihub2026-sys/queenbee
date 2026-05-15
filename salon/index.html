@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Queen Bee Beauty Studio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <body id="top">
+    <!-- Navigation -->
+   <nav class="navbar">
+    
+    <!-- ✅ LOGO IMAGE -->
+    <div class="logo">
+        <img src="assets/queen_bee_logo-removebg-preview.png" alt="Logo" />
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="#top">Home</a></li>
+         <li><a href="#about">About us</a></li>
+        <!-- <li><a href="#portfolio">Services</a></li> -->
+        <li><a href="#services">Services</a></li>
+        <li><a href="#artists">Artists</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
+</nav>
+    <!-- Hero Section with Parallax -->
+<section class="hero">
+
+  <!-- ✅ BACKGROUND VIDEO -->
+  <video class="bg-video" autoplay muted loop playsinline>
+    <source src="assets/1video.mp4" type="video/mp4" />
+  </video>
+
+  <!-- overlay (keep your existing) -->
+  <div class="hero-overlay"></div>
+
+  <!-- your content (unchanged) -->
+  <div class="hero-content">
+    <h1 class="hero-title neon-text">
+      Beauty <span class="neon-amp">&</span>
+      <span class="neon-cyan">Makeup Studio</span>
+    </h1>
+    <p class="hero-subtitle">
+      High-fashion makeup artistry for the bold and beautiful
+    </p>
+<a href="#contact" class="neon-button">
+    BOOK NOW
+</a> 
+ </div>
+
+</section>
+<!-- 
+about us  -->
+
+<!-- ABOUT US SECTION -->
+
+<section class="about-split-premium" id="about">
+  <div class="about-split-container">
+    <!-- LEFT IMAGE PANEL -->
+    <div class="about-split-left">
+      <div class="about-photo-frame">
+        <img src="assets/about bee.jpeg" alt="Queen Bee Beauty Studio">
+
+        <div class="about-photo-badge">LUXURY GLAM</div>
+
+        <div class="about-floating-review">
+          <h4>500+</h4>
+          <p>Happy Clients</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT CONTENT PANEL -->
+    <div class="about-split-right">
+      <span class="about-chip">ABOUT QUEEN BEE</span>
+
+      <h2 class="about-split-title">
+        Beauty That Feels
+        <span>Royal</span>
+      </h2>
+
+      <p class="about-split-text">
+        Queen Bee Beauty Studio is where elegance, confidence, and modern glam
+        come together. We create refined looks that bring out your natural beauty
+        while giving every occasion a luxury finish.
+      </p>
+
+      <div class="about-info-blocks">
+        <div class="info-block">
+          <div class="info-number">01</div>
+          <div class="info-content">
+            <h3>Luxury Beauty Experience</h3>
+            <p>
+              Premium products, detailed artistry, and a polished experience for every client.
+            </p>
+          </div>
+        </div>
+
+        <div class="info-block">
+          <div class="info-number">02</div>
+          <div class="info-content">
+            <h3>Modern Glam & Bridal Styling</h3>
+            <p>
+              From bridal elegance to party looks, every style is crafted to be graceful, trendy, and camera-ready.
+            </p>
+          </div>
+        </div>
+
+        <div class="info-block">
+          <div class="info-number">03</div>
+          <div class="info-content">
+            <h3>Looks Personalized For You</h3>
+            <p>
+              We match your face, tone, outfit, and event so your final look feels unique and unforgettable.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-bottom-bar">
+        <!-- <div class="about-metrics">
+          <div class="metric">
+            <strong>5+</strong>
+            <span>Years</span>
+          </div>
+          <div class="metric">
+            <strong>100%</strong>
+            <span>Luxury Finish</span>
+          </div>
+        </div> -->
+
+        <a href="#contact" class="about-split-btn">Book Your Look</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- about us end -->
+
+
+
+    <!-- Instagram Feed -->
+<section class="queenbee-gallery-section">
+
+    <h2 class="queenbee-gallery-title">
+        LATEST <span class="queenbee-highlight">LOOKS</span>
+    </h2>
+
+    <div class="queenbee-gallery-grid">
+
+        <img src="queen/1.jpeg" onclick="openQueenImage(this.src)">
+        <img src="queen/2.jpeg" onclick="openQueenImage(this.src)">
+        <img src="queen/3.jpeg" onclick="openQueenImage(this.src)">
+        <img src="queen/4.jpeg" onclick="openQueenImage(this.src)">
+        <img src="queen/5.jpeg" onclick="openQueenImage(this.src)">
+        <img src="queen/6.jpeg" onclick="openQueenImage(this.src)">
+        <img src="queen/8.jpeg" onclick="openQueenImage(this.src)">
+        <img src="queen/9.jpeg" onclick="openQueenImage(this.src)">
+        <img src="queen/10.jpeg" onclick="openQueenImage(this.src)">
+        <img src="queen/11.jpeg" onclick="openQueenImage(this.src)">
+        <img src="queen/12.jpeg" onclick="openQueenImage(this.src)">
+        <img src="queen/13.jpeg" onclick="openQueenImage(this.src)">
+
+    </div>
+
+    <a href="https://www.instagram.com"
+       target="_blank"
+       class="queenbee-instagram-btn">
+
+       FOLLOW @QUEEN BEE
+
+    </a>
+
+</section>
+
+<!-- FULL IMAGE VIEWER -->
+
+<div id="queenbeeImageViewer" class="queenbee-image-popup">
+
+    <span class="queenbee-close-btn"
+          onclick="closeQueenImage()">
+
+          &times;
+
+    </span>
+
+    <img id="queenbeeFullImage">
+
+</div>
+
+<!-- FULL IMAGE VIEWER -->
+
+<div id="imageViewer" class="image-viewer">
+
+    <span class="close-btn" onclick="closeImage()">
+        &times;
+    </span>
+
+    <img id="fullImage">
+
+</div>
+
+    <!-- Portfolio Grid -->
+<!-- =========================
+     PREMIUM PORTFOLIO SECTION
+========================= -->
+
+<!-- =========================
+     PREMIUM SERVICES SECTION
+========================= -->
+
+<section class="queen-services-section"
+         id="services">
+
+    <!-- TOP -->
+
+    <div class="queen-services-top">
+
+        <span class="queen-services-tag">
+            QUEEN BEE SERVICES
+        </span>
+
+        <h2 class="queen-services-title">
+            Our <span>Luxury Services</span>
+        </h2>
+
+        <p class="queen-services-text">
+            Experience premium beauty treatments crafted for elegance,
+            confidence, and flawless glam with luxury finishing.
+        </p>
+
+    </div>
+
+    <!-- SERVICES GRID -->
+
+    <div class="queen-services-grid">
+
+        <!-- CARD 1 -->
+
+        <div class="queen-service-card">
+
+            <img src="queen/12.jpeg"
+                 alt="Bridal Makeup">
+
+            <div class="queen-service-overlay">
+
+                <span>BRIDAL MAKEUP</span>
+
+                <h3>Luxury Bridal Styling</h3>
+
+                <p>
+                    Elegant bridal makeup with premium long-lasting finish.
+                </p>
+
+                <a href="#contact"
+                   class="queen-service-btn">
+
+                   BOOK NOW
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- CARD 2 -->
+
+        <div class="queen-service-card">
+
+            <img src="assets/18.jpg"
+                 alt="Skin Care">
+
+            <div class="queen-service-overlay">
+
+                <span>SKIN CARE</span>
+
+                <h3>Glow Facial Treatment</h3>
+
+                <p>
+                    Deep cleansing and glow treatments for radiant skin.
+                </p>
+
+                <a href="#contact"
+                   class="queen-service-btn">
+
+                   BOOK NOW
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- CARD 3 -->
+
+        <div class="queen-service-card">
+
+            <img src="assets/16.jpg"
+                 alt="Celebrity Makeup">
+
+            <div class="queen-service-overlay">
+
+                <span>CELEBRITY GLAM</span>
+
+                <h3>Red Carpet Makeup</h3>
+
+                <p>
+                    Camera-ready celebrity-inspired luxury glam styling.
+                </p>
+
+                <a href="#contact"
+                   class="queen-service-btn">
+
+                   BOOK NOW
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- CARD 4 -->
+
+        <div class="queen-service-card">
+
+            <img src="queen/1.jpeg"
+                 alt="Fantasy Makeup">
+
+            <div class="queen-service-overlay">
+
+                <span>FANTASY LOOK</span>
+
+                <h3>Creative Beauty Art</h3>
+
+                <p>
+                    Artistic beauty concepts designed for unique styling.
+                </p>
+
+                <a href="#contact"
+                   class="queen-service-btn">
+
+                   BOOK NOW
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- CARD 5 -->
+
+        <div class="queen-service-card">
+
+            <img src="queen/14.jpeg"
+                 alt="Premium Bridal">
+
+            <div class="queen-service-overlay">
+
+                <span>PREMIUM BRIDAL</span>
+
+                <h3>Elegant Wedding Makeup</h3>
+
+                <p>
+                    Timeless wedding beauty with royal finishing touch.
+                </p>
+
+                <a href="#contact"
+                   class="queen-service-btn">
+
+                   BOOK NOW
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- CARD 6 -->
+
+        <div class="queen-service-card">
+
+            <img src="assets/17.jpg"
+                 alt="Facial Care">
+
+            <div class="queen-service-overlay">
+
+                <span>FACIAL CARE</span>
+
+                <h3>Luxury Skin Glow</h3>
+
+                <p>
+                    Premium facial care treatments for healthy glowing skin.
+                </p>
+
+                <a href="#contact"
+                   class="queen-service-btn">
+
+                   BOOK NOW
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="luxury-gallery-section">
+
+    <h2 class="luxury-gallery-title">
+        OUR <span class="luxury-highlight-text">OUTLET</span>
+    </h2>
+
+    <div class="luxury-gallery-wrapper">
+
+        <div class="luxury-gallery-card">
+            <img src="assets/1.jpeg" alt="">
+        </div>
+
+        <div class="luxury-gallery-card">
+            <img src="assets/2.jpeg" alt="">
+        </div>
+
+        <div class="luxury-gallery-card">
+            <img src="assets/3.jpeg" alt="">
+        </div>
+
+        <div class="luxury-gallery-card">
+            <img src="assets/4.jpeg" alt="">
+        </div>
+
+        <div class="luxury-gallery-card">
+            <img src="assets/5.jpeg" alt="">
+        </div>
+
+        <div class="luxury-gallery-card">
+            <img src="assets/6.jpeg" alt="">
+        </div>
+
+        <div class="luxury-gallery-card">
+            <img src="assets/7.jpeg" alt="">
+        </div>
+
+        <div class="luxury-gallery-card">
+            <img src="assets/8.jpeg" alt="">
+        </div>
+
+        <div class="luxury-gallery-card">
+            <img src="assets/9.jpeg" alt="">
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<!-- out  -->
+<!-- =========================
+     EXPERIENCE SECTION
+========================= -->
+
+<section class="experience-section">
+
+    <h2 class="luxury-gallery-title">
+        OUR <span class="luxury-highlight-text">EXPERIENCE</span>
+    </h2>
+
+    <div class="experience-container">
+
+        <!-- BOX 1 -->
+
+        <div class="experience-box">
+
+            <h1 class="counter"
+                data-target="500">
+                0
+            </h1>
+
+            <p>
+                Happy Clients
+            </p>
+
+        </div>
+
+        <!-- BOX 2 -->
+
+        <div class="experience-box">
+
+            <h1 class="counter"
+                data-target="10">
+                0
+            </h1>
+
+            <p>
+                Years Experience
+            </p>
+
+        </div>
+
+        <!-- BOX 3 -->
+
+        <div class="experience-box">
+
+            <h1 class="counter"
+                data-target="100">
+                0
+            </h1>
+
+            <p>
+                Luxury Finish
+            </p>
+
+        </div>
+
+        <!-- BOX 4 -->
+
+        <div class="experience-box">
+
+            <h1 class="counter"
+                data-target="300">
+                0
+            </h1>
+
+            <p>
+                Bridal Makeovers
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- count end  -->
+    <!-- Services with Parallax -->
+   <section id="services" class="services-section">
+  <div class="services-overlay"></div>
+
+  <div class="services-content">
+    <h2 class="section-title">SIGNATURE <span class="neon-pink">SERVICES</span></h2>
+
+    <div class="services-grid">
+
+      <div class="service-card popular">
+        <div class="popular-tag">MOST POPULAR</div>
+        <div class="service-icon">
+          <i class="fas fa-spa"></i>
+        </div>
+        <h3>Hydra Facial</h3>
+        <p class="price">Rs.1750+</p>
+        <p class="service-description">
+          Deep cleansing facial treatment for fresh, glowing, and hydrated skin.
+        </p>
+<a href="#contact" class="service-btn">
+    BOOK NOW
+</a>      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-gem"></i>
+        </div>
+        <h3>Luxury Facial</h3>
+        <p class="price">Rs.1950+</p>
+        <p class="service-description">
+          Premium glow facial options like Gold Radiance, Diamond, Platinum, and Jewel.
+        </p>
+<a href="#contact" class="service-btn">
+    BOOK NOW
+</a>      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-magic"></i>
+        </div>
+        <h3>Skin Treatment</h3>
+        <p class="price">Rs.2500+</p>
+        <p class="service-description">
+          Advanced skin care treatments for pigmentation, lightening, neck, and under-eye care.
+        </p>
+        <a href="#contact" class="service-btn">
+            BOOK NOW
+        </a>
+      </div>
+
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-hand-sparkles"></i>
+        </div>
+        <h3>Manicure</h3>
+        <p class="price">Rs.375+</p>
+        <p class="service-description">
+          Regular, French, Paraffin, Jelly Premium, and Ice Cream manicure services.
+        </p>
+        <a href="#contact" class="service-btn">
+            BOOK NOW
+        </a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-shoe-prints"></i>
+        </div>
+        <h3>Pedicure</h3>
+        <p class="price">Rs.550+</p>
+        <p class="service-description">
+          Relaxing pedicure services including Ice Cream, Paraffin, Crystal Crush, and heel care.
+        </p>
+        <a href="#contact" class="service-btn">
+            BOOK NOW
+        </a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <h3>Clean Up</h3>
+        <p class="price">Rs.675+</p>
+        <p class="service-description">
+          Clean up, peel-off mask, fruit/red wine clean up, insta whitening, and hydra clean-up.
+        </p>
+        <a href="#contact" class="service-btn">
+            BOOK NOW
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+    <!-- Artists Section -->
+<section id="artists" class="artists-section">
+    <h2 class="section-title">MEET OUR <span class="neon-cyan">ARTISTS</span></h2>
+    <div class="artists-container">
+        <!-- Artist 1 -->
+        <div class="artist-card">
+            <div class="artist-image-container">
+                <div class="artist-image" style="background-image: url('assets/best-01.jpg')"></div>
+            </div>
+            <h3 class="artist-name">ALEXA RAY</h3>
+            <div class="artist-skills">
+                <div class="skill">
+                    <span class="skill-name">Editorial</span>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar" data-level="95"></div>
+                        <span class="skill-percent">95%</span>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span class="skill-name">Bridal</span>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar" data-level="90"></div>
+                        <span class="skill-percent">90%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Artist 2 -->
+        <div class="artist-card">
+            <div class="artist-image-container">
+                <div class="artist-image" style="background-image: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&auto=format&fit=crop&q=80')"></div>
+            </div>
+            <h3 class="artist-name">MARRY</h3>
+            <div class="artist-skills">
+                <div class="skill">
+                    <span class="skill-name">Celebrity</span>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar" data-level="98"></div>
+                        <span class="skill-percent">98%</span>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span class="skill-name">Fantasy</span>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar" data-level="85"></div>
+                        <span class="skill-percent">85%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Artist 3 -->
+        <div class="artist-card">
+            <div class="artist-image-container">
+                <div class="artist-image" style="background-image: url('https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80')"></div>
+            </div>
+            <h3 class="artist-name">JASMINE LEE</h3>
+            <div class="artist-skills">
+                <div class="skill">
+                    <span class="skill-name">Bridal</span>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar" data-level="97"></div>
+                        <span class="skill-percent">97%</span>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span class="skill-name">Editorial</span>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar" data-level="88"></div>
+                        <span class="skill-percent">88%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- why choose us -->
+
+<section class="why-queenbee" id="why">
+  <div class="why-container">
+
+    <!-- LEFT SIDE TEXT -->
+    <div class="why-left">
+      <span class="why-tag">WHY CHOOSE US</span>
+
+      <h2 class="why-title">
+        Why Clients Choose
+        <span>Queen Bee</span>
+      </h2>
+
+      <p class="why-text">
+        We combine elegance, modern beauty trends, and personalized styling to
+        deliver looks that truly stand out. Every detail is crafted with precision,
+        care, and premium quality.
+      </p>
+
+      <a href="#contact" class="why-btn">Book Your Look</a>
+    </div>
+
+    <!-- RIGHT SIDE IMAGES -->
+    <div class="why-right">
+
+      <div class="why-image-grid">
+        <img src="assets/why choose us.jpeg" alt="Bridal Makeup">
+        <img src="assets/why choose 2.jpeg" alt="Beauty Styling">
+        <img src="assets/why choose 3.jpeg" alt="Makeup Artist">
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+ <!-- why chiise us end  -->
+  <!-- test -->
+ <section class="clients-luxury" id="clients">
+  <div class="clients-container">
+
+    <div class="clients-heading">
+      <span class="clients-tag">HAPPY CLIENTS</span>
+      <h2>
+        Loved By <span>Beautiful Clients</span>
+      </h2>
+      <p>
+        Real experiences from clients who trusted Queen Bee Beauty Studio for
+        elegance, confidence, and flawless glam.
+      </p>
+    </div>
+
+    <div class="clients-grid">
+      <!-- Card 1 -->
+      <div class="client-card">
+        <div class="quote-icon">“</div>
+        <p class="client-text">
+          Queen Bee made my bridal look absolutely stunning. The makeup was elegant,
+          long-lasting, and exactly what I dreamed of.
+        </p>
+        <div class="client-bottom">
+          <div class="client-avatar">S</div>
+          <div>
+            <h4>Shalini</h4>
+            <span>Bride Client</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="client-card featured">
+        <div class="quote-icon">“</div>
+        <p class="client-text">
+          I loved the way they matched my skin tone and outfit perfectly. The final
+          look was premium, classy, and camera-ready.
+        </p>
+        <div class="client-bottom">
+          <div class="client-avatar">P</div>
+          <div>
+            <h4>Priya</h4>
+            <span>Party Makeup Client</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="client-card">
+        <div class="quote-icon">“</div>
+        <p class="client-text">
+          Professional service, quality products, and beautiful finishing. I felt
+          very confident and received so many compliments.
+        </p>
+        <div class="client-bottom">
+          <div class="client-avatar">R</div>
+          <div>
+            <h4>Revathi</h4>
+            <span>Premium Styling Client</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- 
+test end  -->
+
+    <!-- Contact Section -->
+<!-- =========================
+     CONTACT SECTION
+========================= -->
+
+<section id="contact"
+         class="contact-section">
+
+    <h2 class="section-title">
+        GET IN
+        <span class="neon-pink">
+            TOUCH
+        </span>
+    </h2>
+
+    <div class="contact-container">
+
+        <!-- LEFT INFO -->
+
+        <div class="contact-info">
+
+            <div class="info-item">
+
+                <i class="fas fa-map-marker-alt neon-pink"></i>
+
+                <p>
+                    No.36-E, Kurivikaran Salai,
+                    Madurai East,
+                    (Near Ganesh Theatre),
+                    Madurai - 625009
+                </p>
+
+            </div>
+
+            <div class="info-item">
+
+                <i class="fas fa-phone neon-pink"></i>
+
+                <p>
+                    +91 9629124387
+                </p>
+
+            </div>
+
+            <div class="info-item">
+
+                <i class="fas fa-envelope neon-pink"></i>
+
+                <p>
+                    bookings@queenbee.com
+                </p>
+
+            </div>
+
+            <!-- SOCIAL -->
+
+            <div class="social-links">
+
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-pinterest"></i>
+                </a>
+
+            </div>
+
+            <!-- BUTTON -->
+
+            <a href="https://www.google.com/maps?rlz=1C1VDKB_enIN1030IN1030&gs_lcrp=EgZjaHJvbWUyDAgAEEUYORixAxiABDIJCAEQIxgnGPAFMgwIAhAAGBQYhwIYgAQyDQgDEC4YrwEYxwEYgAQyBwgEEAAYgAQyBwgFEAAYgAQyBwgGEAAYgAQyBwgHEAAYgAQyBwgIEAAYgAQyBwgJEAAYgATSAQgyNzY1ajBqN6gCALACAA&um=1&ie=UTF-8&fb=1&gl=in&sa=X&geocode=KWt4Fb-4xQA7MUUStECXvD0p&daddr=32,+E,+kuruvikarn+salai,+East,+Madurai,+Tamil+Nadu+625009"
+               target="_blank"
+               class="map-btn">
+
+               OPEN LOCATION
+
+            </a>
+
+        </div>
+
+        <!-- RIGHT MAP -->
+
+        <div class="contact-map">
+
+            <iframe
+                src="https://maps.google.com/maps?q=Kuruvikaran%20Salai%20Madurai&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+             <div class="logo">
+        <img src="assets/queen_bee_logo-removebg-preview.png" alt="Logo" />
+    </div><br><br>
+
+
+          
+            <p class="footer-tagline">Redefining beauty with bold, high-fashion makeup artistry</p>
+            <div class="footer-social">
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        
+        
+        <div class="footer-links">
+            <h4 class="footer-heading">Quick Links</h4>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#artists">Artists</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-contact">
+            <h4 class="footer-heading">Contact Us</h4>
+            <ul>
+                <li><i class="fas fa-map-marker-alt"></i>No.36-E,Kurivikaran Salai,Madurai East,(Near Ganesh Theatre),Madurai-625009</li>
+                <li><i class="fas fa-phone"></i> 9629124387</li>
+                <li><i class="fas fa-envelope"></i> bookings@queenbee.com</li>
+                <li><i class="fas fa-clock"></i> Mon-Sat: 9AM - 8PM</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2023 queen Makeup Studio. All rights reserved.</p>
+    </div>
+</footer>
+
+    <!-- Live Chat Widget -->
+    <div class="chat-container">
+        <div class="chat-header">
+            <span>QUEEN BEE BEAUTY ADVISOR</span>
+            <button class="close-chat"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot">
+                <p>Hello gorgeous! 💖 How can I help you today?</p>
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Type your message...">
+            <button id="sendMessage"><i class="fas fa-paper-plane"></i></button>
+        </div>
+        <div class="quick-replies">
+            <button class="quick-reply">Book Appointment</button>
+            <button class="quick-reply">Makeup Advice</button>
+            <button class="quick-reply">Pricing</button>
+        </div>
+    </div>
+    <div class="chat-toggle">
+        <i class="fas fa-comment-dots"></i>
+    </div>
+<a
+  href="https://wa.me/919629124387?text=Hi%20Queen%20Bee%20Beauty%2C%20I%20would%20like%20to%20book%20an%20appointment.%20Please%20share%20available%20slots."
+  class="whatsapp-float"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Chat on WhatsApp"
+>
+  <i class="fab fa-whatsapp"></i>
+</a>
+    <script src="js/main.js"></script>
+    <script src="js/chat.js"></script>
+</body>
+</html>
