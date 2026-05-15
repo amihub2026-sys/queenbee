@@ -2970,3 +2970,77 @@ h1, h2, h3 {
     }
 
 }
+
+.queenbee-image-popup,
+.image-viewer{
+    display: none;
+}
+
+@media (max-width:768px){
+
+    .nav-links{
+        position: fixed;
+
+        top: 100px;
+        left: 18px;
+
+        width: 58%;
+       height: 68vh;
+
+        background: #000;
+
+        border-radius: 28px;
+
+        padding: 55px 25px;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 28px;
+
+        z-index: 9999;
+
+        transform: translateX(-120%);
+        transition: 0.45s ease;
+
+        border: 1px solid rgba(255,255,255,0.06);
+
+        box-shadow:
+        0 0 30px rgba(255,174,0,0.12);
+    }
+
+    .nav-links.active{
+        transform: translateX(0);
+    }
+
+    .nav-links li{
+        list-style: none;
+    }
+
+    .nav-links li a{
+        color: #fff;
+
+        text-decoration: none;
+
+        font-size: 17px;
+
+        font-weight: 600;
+
+        letter-spacing: 0.5px;
+    }
+
+    .menu-toggle{
+        display: block;
+
+        position: relative;
+
+        z-index: 10000;
+
+        color: #fff;
+
+        font-size: 28px;
+
+        cursor: pointer;
+    }
+
+}
