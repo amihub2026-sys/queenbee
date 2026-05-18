@@ -1,294 +1,234 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 
-  /* =========================
-     MOBILE MENU
-  ========================= */
+/* =========================
+   MOBILE MENU
+========================= */
 
-  const menuToggle =
-  document.querySelector(".menu-toggle");
+const menuToggle =
+document.querySelector(".menu-toggle");
 
-  const navLinks =
-  document.querySelector(".nav-links");
+const navLinks =
+document.querySelector(".nav-links");
 
-  if(menuToggle){
+if(menuToggle && navLinks){
 
-    menuToggle.addEventListener("click", function () {
+    menuToggle.addEventListener("click", () => {
 
-      navLinks.classList.toggle("active");
+        navLinks.classList.toggle("active");
 
-      menuToggle.querySelector("i")
-      .classList.toggle("fa-times");
+        const icon =
+        menuToggle.querySelector("i");
 
-      menuToggle.querySelector("i")
-      .classList.toggle("fa-bars");
+        icon.classList.toggle("fa-bars");
+
+        icon.classList.toggle("fa-times");
 
     });
 
-  }
+}
 
-  /* =========================
-     SMOOTH SCROLL
-  ========================= */
+/* =========================
+   SMOOTH SCROLL
+========================= */
 
-  document.querySelectorAll('a[href^="#"]')
-  .forEach((anchor) => {
+document.addEventListener("click", (e) => {
 
-    anchor.addEventListener("click", function (e) {
+    const anchor =
+    e.target.closest('a[href^="#"]');
 
-      e.preventDefault();
+    if(!anchor) return;
 
-      const targetId =
-      this.getAttribute("href");
+    const targetId =
+    anchor.getAttribute("href");
 
-      const targetElement =
-      document.querySelector(targetId);
+    if(targetId === "#") return;
 
-      if(targetElement){
+    const target =
+    document.querySelector(targetId);
+
+    if(target){
+
+        e.preventDefault();
 
         window.scrollTo({
 
-          top: targetElement.offsetTop - 80,
+            top: target.offsetTop - 80,
 
-          behavior: "smooth",
+            behavior: "smooth"
 
         });
 
-      }
+    }
+
+});
+
+
+/* =========================
+   COUNTER ANIMATION
+   (ONLY WHEN VISIBLE)
+========================= */
+
+const counters =
+document.querySelectorAll(".counter");
+
+const counterObserver =
+new IntersectionObserver((entries)=>{
+
+    entries.forEach((entry)=>{
+
+        if(entry.isIntersecting){
+
+            const counter =
+            entry.target;
+
+            const target =
+            +counter.dataset.target;
+
+            let count = 0;
+
+            const increment =
+            Math.ceil(target / 80);
+
+            const updateCounter = () => {
+
+                count += increment;
+
+                if(count < target){
+
+                    counter.innerText = count;
+
+                    requestAnimationFrame(updateCounter);
+
+                }else{
+
+                    counter.innerText = target + "+";
+
+                }
+
+            };
+
+            updateCounter();
+
+            counterObserver.unobserve(counter);
+
+        }
 
     });
 
-  });
+},{
+    threshold:0.5
+});
 
-  /* =========================
-     PORTFOLIO
-  ========================= */
+counters.forEach((counter)=>{
 
-  const portfolioGrid =
-  document.querySelector(".portfolio-grid");
+    counterObserver.observe(counter);
 
-  if(portfolioGrid){
+});
 
-    const portfolioData = [
 
-      {
-        image: "assets/skincare2.jpeg",
-        category: "editorial",
-      },
+/* =========================
+   GALLERY POPUP
+========================= */
 
-      {
-        image: "assets/bride.jpeg",
-        category: "bridal",
-      },
+const popup =
+document.getElementById("queenbeePopup");
 
-      {
-        image: "assets/celebhrity1.jpeg",
-        category: "celebrity",
-      },
+const popupImage =
+document.getElementById("queenbeePopupImage");
 
-      {
-        image: "assets/fantasy5.jpeg",
-        category: "fantasy",
-      },
+const closeBtn =
+document.getElementById("queenbeeClose");
 
-      {
-        image: "assets/skincare.jpeg",
-        category: "editorial",
-      },
+/* EVENT DELEGATION = FAST */
 
-      {
-        image: "assets/bride2.jpeg",
-        category: "bridal",
-      },
+document.addEventListener("click",(e)=>{
 
-      {
-        image: "assets/celebhrity2.jpeg",
-        category: "celebrity",
-      },
+    const image =
+    e.target.closest(".queenbee-img");
 
-      {
-        image: "assets/god2.jpeg",
-        category: "fantasy",
-      }
+    if(image){
 
-    ];
+        popup.style.display = "flex";
 
-    portfolioGrid.innerHTML = "";
+        popupImage.src = image.src;
 
-    portfolioData.forEach((item) => {
+    }
 
-      const portfolioItem =
-      document.createElement("div");
+});
 
-      portfolioItem.className =
-      `portfolio-item ${item.category}`;
+/* CLOSE */
 
-      portfolioItem.style.backgroundImage =
-      `url(${item.image})`;
+if(closeBtn){
 
-      const portfolioInfo =
-      document.createElement("div");
+    closeBtn.addEventListener("click",()=>{
 
-      portfolioInfo.className =
-      "portfolio-info";
-
-      portfolioInfo.innerHTML = `
-        <p class="portfolio-category">
-          ${item.category.toUpperCase()}
-        </p>
-
-        <a href="#"
-           class="view-more">
-           View Details
-        </a>
-      `;
-
-      portfolioItem.appendChild(portfolioInfo);
-
-      portfolioGrid.appendChild(portfolioItem);
+        popup.style.display = "none";
 
     });
 
-  }
+}
 
-  /* =========================
-     GALLERY IMAGES
-  ========================= */
+/* OUTSIDE CLICK */
 
-  const galleryWrappers =
-  document.querySelectorAll(".luxury-gallery-wrapper");
+if(popup){
 
-  const beautyImages = [
+    popup.addEventListener("click",(e)=>{
 
-    "assets/1.jpeg",
-    "assets/2.jpeg",
-    "assets/3.jpeg",
-    "assets/4.jpeg",
-    "assets/5.jpeg",
-    "assets/6.jpeg",
-    "assets/7.jpeg",
-    "assets/8.jpeg",
-    "assets/9.jpeg"
+        if(e.target === popup){
 
-  ];
+            popup.style.display = "none";
 
-  galleryWrappers.forEach((wrapper) => {
-
-    beautyImages.forEach((imageUrl) => {
-
-      const card =
-      document.createElement("div");
-
-      card.className =
-      "luxury-gallery-card";
-
-      const img =
-      document.createElement("img");
-
-      img.src = imageUrl;
-
-      img.className =
-      "luxury-gallery-image";
-
-      card.appendChild(img);
-
-      wrapper.appendChild(card);
+        }
 
     });
 
-  });
+}
 
-  /* =========================
-     COUNTER ANIMATION
-  ========================= */
 
-  const counters =
-  document.querySelectorAll(".counter");
+/* =========================
+   CONTACT FORM
+========================= */
 
-  counters.forEach((counter) => {
+const contactForm =
+document.querySelector(".contact-form");
 
-    const updateCounter = () => {
+if(contactForm){
 
-      const target =
-      Number(counter.getAttribute("data-target"));
+    contactForm.addEventListener("submit",(e)=>{
 
-      const count =
-      Number(counter.innerText);
+        e.preventDefault();
 
-      const increment =
-      Math.ceil(target / 100);
+        const name =
+        contactForm.querySelector('input[type="text"]').value.trim();
 
-      if(count < target){
+        const email =
+        contactForm.querySelector('input[type="email"]').value.trim();
 
-        counter.innerText =
-        count + increment;
+        const message =
+        contactForm.querySelector("textarea").value.trim();
 
-        setTimeout(updateCounter, 20);
+        if(!name || !email || !message){
 
-      }
-      else{
+            alert("Please fill all fields");
 
-        counter.innerText =
-        target + "+";
+            return;
 
-      }
+        }
 
-    };
+        if(!email.includes("@")){
 
-    updateCounter();
+            alert("Enter valid email");
 
-  });
+            return;
 
-  /* =========================
-     CONTACT FORM
-  ========================= */
+        }
 
-  const contactForm =
-  document.querySelector(".contact-form");
+        alert("Message sent successfully!");
 
-  if(contactForm){
-
-    contactForm.addEventListener("submit",
-    function (e) {
-
-      e.preventDefault();
-
-      const nameInput =
-      this.querySelector('input[type="text"]');
-
-      const emailInput =
-      this.querySelector('input[type="email"]');
-
-      const messageInput =
-      this.querySelector("textarea");
-
-      if(
-        !nameInput.value ||
-        !emailInput.value ||
-        !messageInput.value
-      ){
-
-        alert("Please fill in all fields");
-
-        return;
-
-      }
-
-      if(!emailInput.value.includes("@")){
-
-        alert("Please enter a valid email address");
-
-        return;
-
-      }
-
-      alert("Message sent successfully!");
-
-      this.reset();
+        contactForm.reset();
 
     });
 
-  }
-
-  
+}
 
 });
