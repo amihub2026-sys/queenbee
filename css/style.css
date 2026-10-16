@@ -3339,3 +3339,446 @@ h1, h2, h3 {
     }
 
 }
+
+
+
+/* ==============================================
+   QUEEN BEE - PREMIUM AESTHETIC SERVICES
+   BLACK / CYAN / GOLD / PURPLE
+============================================== */
+
+.qb-services {
+  position: relative;
+  width: 100%;
+  padding: 105px 5% 90px;
+  background:
+    linear-gradient(
+      rgba(8, 8, 10, 0.88),
+      rgba(8, 8, 10, 0.92)
+    ),
+    url("https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1800&q=85")
+    center center / cover no-repeat;
+  overflow: hidden;
+}
+
+.qb-services,
+.qb-services * {
+  box-sizing: border-box;
+}
+
+.qb-services-inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.qb-services-heading {
+  text-align: center;
+  margin: 0 auto 55px;
+  max-width: 760px;
+}
+
+.qb-section-label {
+  display: block;
+  color: #ffcc00;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.qb-services-heading .section-title {
+  margin: 0 0 16px;
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.2;
+  font-weight: 800;
+  color: #fff;
+}
+
+.qb-services-heading .neon-pink {
+  color: #00eff5;
+}
+
+.qb-services-heading p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: #e1dce1;
+}
+
+/* GRID - 3 CARDS PER ROW */
+
+.qb-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+  align-items: stretch;
+}
+
+/* SERVICE CARD */
+
+.qb-service-card {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  width: 100%;
+  height: 100%;
+  padding: 34px 25px 30px;
+  border: 1px solid rgba(160, 25, 168, .65);
+  border-radius: 11px;
+  background: #1f1f1f;
+  color: #fff;
+  text-align: center;
+  overflow: visible;
+  transition:
+    transform .4s ease,
+    box-shadow .4s ease,
+    border-color .4s ease;
+}
+
+/* HOVER BORDER & LIFT */
+
+.qb-service-card:hover {
+  transform: translateY(-9px);
+  border-color: #ffcc00;
+  box-shadow:
+    0 18px 38px rgba(0,0,0,.4),
+    0 9px 28px rgba(187,0,192,.24);
+}
+
+/* IMAGE WRAPPER */
+
+.qb-service-image {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  border-radius: inherit;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transform: scale(1.04);
+  transition:
+    opacity .55s ease,
+    transform .75s ease;
+  pointer-events: none;
+}
+
+/* DARK LAYER BEHIND CONTENT */
+
+.qb-service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: rgba(25,25,25,.97);
+  transition: background .45s ease;
+  pointer-events: none;
+}
+
+/* IMPORTANT - IMAGE CLEARLY VISIBLE ON HOVER */
+
+.qb-service-card:hover .qb-service-image {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.qb-service-card:hover::before {
+  background: rgba(10,10,13,.48);
+}
+
+/* ==============================================
+   ONLINE TREATMENT IMAGES
+============================================== */
+
+.qb-facials .qb-service-image {
+  background-image:
+    url("../assets/1bp.avif");
+}
+
+.qb-glow .qb-service-image {
+  background-image:
+    url("../assets/2bp.avif");
+}
+
+.qb-peels .qb-service-image {
+  background-image:
+    url("../assets/3bp.avif");
+}
+
+.qb-hair .qb-service-image {
+  background-image:
+    url("../assets/4bp.avif");
+}
+
+.qb-laser .qb-service-image {
+  background-image:
+    url("../assets/5bp.avif");
+}
+
+.qb-analysis .qb-service-image {
+  background-image:
+    url("../assets/6bp.avif");
+}
+
+/* CONTENT */
+
+.qb-service-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+}
+
+/* GOLD ICONS */
+
+.qb-service-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75px;
+  height: 75px;
+  margin: 0 auto 19px;
+  color: #ffcc00;
+  font-size: 41px;
+  transition: transform .35s ease;
+}
+
+.qb-service-card:hover .qb-service-icon {
+  transform: scale(1.13);
+}
+
+/* CYAN HEADINGS */
+
+.qb-service-card h3 {
+  margin: 0 0 18px;
+  color: #00eff5;
+  font-size: clamp(20px, 2vw, 25px);
+  line-height: 1.35;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+/* DESCRIPTION */
+
+.qb-description {
+  margin: 0 0 25px;
+  color: #f5f5f5;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+/* PRICE ROWS */
+
+.qb-price-list {
+  width: 100%;
+  margin: 0 0 30px;
+}
+
+.qb-price-list > div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 13px 0;
+  border-bottom: 1px solid rgba(255,255,255,.2);
+}
+
+.qb-price-list > div:last-child {
+  border-bottom: none;
+}
+
+.qb-price-list span {
+  min-width: 0;
+  color: #fff;
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 500;
+  text-align: left;
+}
+
+.qb-price-list strong {
+  color: #ffcc00;
+  font-size: 17px;
+  font-weight: 800;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.qb-price-list small {
+  display: block;
+  margin-top: 4px;
+  color: #e0dbe0;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+/* BOOK NOW - MATCH FIRST SCREENSHOT */
+
+.qb-book-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  min-width: 155px;
+  min-height: 46px;
+  margin-top: auto;
+  padding: 11px 25px;
+  border: 2px solid #00eff5;
+  border-radius: 40px;
+  background: rgba(20,20,20,.25);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  transition:
+    background .3s ease,
+    color .3s ease,
+    transform .3s ease;
+}
+
+.qb-book-btn:hover {
+  background: #00eff5;
+  color: #151515;
+  transform: translateY(-2px);
+}
+
+/* POPULAR TAG */
+
+.qb-popular {
+  position: absolute;
+  top: -15px;
+  right: 20px;
+  z-index: 4;
+  padding: 7px 17px;
+  border-radius: 22px;
+  background: #ffcc00;
+  color: #080808;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* FOOTNOTE */
+
+.qb-services-note {
+  margin: 38px auto 0;
+  max-width: 800px;
+  color: #d5d0d5;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* ==============================================
+   TABLET
+============================================== */
+
+@media (max-width: 1024px) {
+  .qb-services {
+    padding: 85px 4%;
+  }
+
+  .qb-services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .qb-service-card {
+    padding: 32px 22px 28px;
+  }
+}
+
+/* ==============================================
+   MOBILE
+============================================== */
+
+@media (max-width: 650px) {
+  .qb-services {
+    padding: 65px 15px 75px;
+  }
+
+  .qb-services-heading {
+    margin-bottom: 42px;
+  }
+
+  .qb-services-heading .section-title {
+    font-size: 30px;
+  }
+
+  .qb-services-heading p {
+    font-size: 13px;
+  }
+
+  .qb-services-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .qb-service-card {
+    padding: 30px 20px 28px;
+  }
+
+  .qb-service-icon {
+    height: 65px;
+    font-size: 36px;
+  }
+
+  .qb-service-card h3 {
+    font-size: 22px;
+  }
+
+  .qb-description {
+    font-size: 13px;
+  }
+
+  .qb-price-list span {
+    font-size: 12px;
+  }
+
+  .qb-price-list strong {
+    font-size: 15px;
+  }
+
+  /* No hover on touch devices:
+     show treatment image by default */
+
+  .qb-service-image {
+    opacity: .55;
+    transform: scale(1);
+  }
+
+  .qb-service-card::before {
+    background: rgba(12,12,15,.65);
+  }
+
+  .qb-service-card:hover::before {
+    background: rgba(12,12,15,.5);
+  }
+
+  .qb-book-btn {
+    width: auto;
+    min-width: 155px;
+  }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  .qb-service-card,
+  .qb-service-image,
+  .qb-service-icon,
+  .qb-book-btn {
+    transition: none;
+  }
+}
